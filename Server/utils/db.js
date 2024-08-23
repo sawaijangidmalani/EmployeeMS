@@ -14,14 +14,25 @@ const con = mysql.createConnection({
   password: process.env.DB_PASSWORD || "root",
   database: process.env.DB_NAME || "employeems",
 });
+console.log(process.env.DB_HOST, process.env.DB_USERNAME, process.env.DB_PASSWORD, process.env.DB_NAME);
 
+
+
+// con.connect(function (err) {
+//   if (err) {
+//     console.log("connection error");
+//   } else {
+//     console.log("Connected");
+//   }
+// });
 
 con.connect(function (err) {
   if (err) {
-    console.log("connection error");
+    console.error("Connection error: ", err.message);
   } else {
     console.log("Connected");
   }
 });
+
 
 export default con;
