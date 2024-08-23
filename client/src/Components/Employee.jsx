@@ -9,7 +9,7 @@ const Employee = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/auth/employee")
+      .get("http://localhost:8000/auth/employee")
       .then((result) => {
         if (result.data.Status) {
           setEmployee(result.data.Result);
@@ -22,7 +22,7 @@ const Employee = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:5000/auth/delete_employee/" + id)
+      .delete("http://localhost:8000/auth/delete_employee/" + id)
       .then((result) => {
         if (result.data.Status) {
           window.location.reload();
@@ -63,7 +63,7 @@ const Employee = () => {
                 <td>{e.email}</td>
                 <td>
                   <img
-                    src={`http://localhost:5000/Images/` + e.image}
+                    src={`http://localhost:8000/Images/` + e.image}
                     alt="Employee"
                     className="employee_image"
                   />

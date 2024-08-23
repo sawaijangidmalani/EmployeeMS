@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:5000/auth/adminlogin", values)
+      .post("http://localhost:8000/auth/adminlogin", values)
       .then((result) => {
         if (result.data.loginStatus) {
           localStorage.setItem("valid", true);

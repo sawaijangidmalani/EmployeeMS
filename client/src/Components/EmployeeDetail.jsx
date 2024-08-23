@@ -8,7 +8,7 @@ const EmployeeDetail = () => {
   // const navigate = useNavigate();
   useEffect(() => {
     axios
-      .get("http://localhost:5000/employee/detail/" + id)
+      .get("http://localhost:8000/employee/detail/" + id)
       .then((result) => {
         setEmployee(result.data[0]);
       })
@@ -16,7 +16,7 @@ const EmployeeDetail = () => {
   }, []);
   // const handleLogout = () => {
   //   axios
-  //     .get("http://localhost:5000/employee/logout")
+  //     .get("http://localhost:8000/employee/logout")
   //     .then((result) => {
   //       if (result.data.Status) {
   //         localStorage.removeItem("valid");
@@ -35,7 +35,7 @@ const EmployeeDetail = () => {
         
         </div>
         <img
-          src={`http://localhost:5000/Images/` + employee.image}
+          src={`http://localhost:8000/Images/` + employee.image}
           className="emp_det_image"
         />
         <div className="d-flex align-items-center flex-column mt-2">

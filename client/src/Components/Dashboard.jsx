@@ -6,7 +6,7 @@ const Dashboard = () => {
   const navigate = useNavigate();
   axios.defaults.withCredentials = true;
   const handleLogout = () => {
-    axios.get("http://localhost:5000/auth/logout").then((result) => {
+    axios.get("http://localhost:8000/auth/logout").then((result) => {
       if (result.data.Status) {
         localStorage.removeItem("valid");
         navigate("/");
