@@ -24,7 +24,7 @@ const LeaveRequest = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-    .post("http://localhost:8000/employee/leave_request", formData)
+    .post("http://localhost:5000/employee/leave_request", formData)
     .then((result) => {
       console.log(result);
       

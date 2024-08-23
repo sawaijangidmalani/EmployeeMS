@@ -7,7 +7,7 @@ const ManageLeaveRequest = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8000/auth/leave_request")
+      .get("http://localhost:5000/auth/leave_request")
       .then((result) => {
         if (result.data.Status) {
           setLeaves(result.data.Result);
@@ -20,7 +20,7 @@ const ManageLeaveRequest = () => {
 
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:8000/auth/delete_leave_request/" + id)
+      .delete("http://localhost:5000/auth/delete_leave_request/" + id)
       .then((result) => {
         console.log(result);
         if (result.data.Status) {

@@ -14,7 +14,7 @@ const EmployeeLogin = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post("http://localhost:8000/employee/employee_login", values)
+      .post("http://localhost:5000/employee/employee_login", values)
       .then((result) => {
         console.log(result.data);
 

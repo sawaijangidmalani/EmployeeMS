@@ -36,6 +36,6 @@ app.get("/verify", verifyUser, (req, res) => {
   return res.json({ Status: true, role: req.role, id: req.id });
 });
 
-app.listen(8000, () => {
+app.listen(5000, () => {
   console.log("Server is running");
 });
